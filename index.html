@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Decisão polêmica</title>
+</head>
+
+<style>
+    div {
+    background-color: rebeccapurple;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    text-align: center;
+    color: rgb(255, 226, 189);
+    font-family:'Times New Roman';
+
+}
+
+button {
+    background: rgb(255, 195, 116);
+    border: none;
+    padding: 10px;
+    width: 80px;
+    border-radius: 20px;
+    font-family:  sans-serif;
+}
+
+img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+  margin-left: 580px;
+  margin-top: 50px;
+}
+
+
+nav {
+  background-color: antiquewhite;
+  color:  rebeccapurple;
+  height: 50px;
+  width:100%;
+} 
+</style>
+
+<body>
+
+    <div id="conteudo">
+<nav><h1>Você caiu no site que vai decidir o futuro dos alunos de Redes</h1></nav>
+        <h2>A escola lotou e apenas a melhor turma vai continuar nela:<h2>
+        <h2>Escolha!<h2>
+            <button onclick="gays()">3RED2</button>
+            <button id="btn" onclick='desvia(this)' onmouseover="desvia(this)">3RED1</button>
+        <img src="Bombastic side eye.gif" alt="Gif do cachorrinho engraçado"> </img>
+    
+    </div>
+
+</body>
+
+<script>
+    function gays(){  
+        alert("Parabéns, você fez a escolha certa! O 3RED2 é a melhor turma ;)")
+     }
+
+    function desvia(t){
+        var btn = t;
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10,90);
+        btn.style.left = geraPosicao(10,90);
+    
+    }
+
+    function geraPosicao(min,max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+</script>
+
+</html>
